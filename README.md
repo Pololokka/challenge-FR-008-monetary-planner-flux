@@ -1,10 +1,17 @@
 # 📋 Indíce
 
 - [Proposta](#id01)
-- [Front-end](#id02)
-  - [HTML, CSS e JS](#id02.1)
-  - [React](#id02.2)
-- [back-end](#id03)
+  - [O desafio](#id01.1)
+  - [Requisitos](#id01.2)
+    - [Requisitos funcionais ](#id01.2.1)
+    - [Requisitos não funcionais ](#id01.2.2)
+    - [Requisitos não obrigatórios](#id01.2.3)
+- [Screenshots](#id02)
+- [O que aprendi](#id03)
+- [Mão a obra...](#id04)
+- [Pré-requisitos](#id05)
+- [Procedimentos de instalação](#id06)
+- [Desafios similares e dicas ](#id07)
 - [Autor](#id08)
 
 # 🚀 Proposta <a name="id01"></a>
@@ -13,57 +20,128 @@ Assim como Linus Torvalds disse "Falar é fácil, me mostre o código". Nós des
 
 E foi assim que essa abordagem nasceu, um roadmap baseado em projetos. A ideia em seu princípio é simples, essa é uma demanda, tente encarar como um desafio técnico e completá-lo em até 7 dias.
 
-Todos seguem o mesmo princípio de passar uma demanda baseada numa pequena história para dar contexto. Sinta-se livre para usar os desafios como quiser, todos podem ser usados como portifólio ou prática.
-
 Ao completar, não esqueça de publicar no linkedin e adicionar #handsOnRoadmap
 
-# front-end <a name="id02"></a>
+## :trophy: O desafio <a name="id01.1"></a>
 
-Sessão destinada a todos desafios de front-end.
+<br />
 
-## HTML, CSS e JS <a name="id02.1"></a>
+Imagine que foi pedido a você para fazer uma página para auxiliar o planejamento monerário.
 
-Todos desafios dessa sessão tem o prefixo challenge-F- no nome, esses prefixos são para facilitar a adição e controle dos projetos propostos, sendo challenge sempre usado e F representa o front-end usando html, css e js puros.
+O papel dessa página é ajudar a medir o quanto é o gasto ideal diário, em função do valor de entrada e quanto se deseja guardar.
+<br />
 
-| nº  | Repositório do projeto                                                                                                       | Techs          |
-| --- | ---------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| 001 | [Cartão de apresentação](https://github.com/JCDMeira/challenge-F-001-presentation-card 'challenge-F-001-presentation-card')  | HTML e CSS     |
-| 002 | [Sessão para divulgação de exposição](https://github.com/JCDMeira/challenge-F-002-one-section 'challenge-F-002-one-section') | HTML e CSS     |
-| 003 | [Landing page de restaurante](https://github.com/JCDMeira/challenge-F-003-lp 'challenge-F-003-lp')                           | HTML e CSS     |
-| 004 | [Landing page de escritório de arquitetura](https://github.com/JCDMeira/challenge-F-004-lp-js 'challenge-F-004-lp-js')       | HTML, CSS e JS |
-| 005 | [Calculadora de IMC](https://github.com/JCDMeira/challenge-F-005-imc-calculator 'challenge-F-005-imc-calculator')            | HTML, CSS e JS |
-| 006 | [Form gerador de leads](https://github.com/JCDMeira/challenge-F-006-form-validation 'challenge-F-006-form-validation ')      | HTML, CSS e JS |
-| 007 | [Calculator](https://github.com/JCDMeira/challenge-F-007-calculator 'challenge-F-007-calculator')                            | HTML, CSS e JS |
-| 008 | [To-do list](https://github.com/JCDMeira/challenge-F-008-to-do-list 'challenge-F-008-to-do-list')                            | HTML, CSS e JS |
-| 009 | [Shopping cart](https://github.com/JCDMeira/challenge-F-009-shopping-cart 'challenge-F-009-shopping-cart')                   | HTML, CSS e JS |
-| 010 | [Weather app](https://github.com/JCDMeira/challenge-F-010-weather-app 'challenge-F-010-weather-app')                         | HTML, CSS e JS |
+## :dart: Os requisitos<a name="id01.2"></a>
 
-## React<a name="id02.2"></a>
+### :dart: Requisitos funcionais <a name="id01.2.1"></a>
 
-Todos desafios dessa sessão tem o prefixo challenge-FR- no nome, esses prefixos são para facilitar a adição e controle dos projetos propostos, sendo challenge sempre usado e FR representa o front-end usando ReactJS.
+<br />
 
-| nº  | Repositório do projeto                                                                                                                                                         | Techs |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----- |
-| 001 | [Linktree hub](https://github.com/JCDMeira/challenge-FR-001-linktree-hub 'challenge-FR-001-linktree-hub')                                                                      | React |
-| 002 | [Travel plans columns](https://github.com/JCDMeira/challenge-FR-002-travel-plans-columns 'challenge-FR-002-travel-plans-columns')                                              | React |
-| 003 | [Score counter](https://github.com/JCDMeira/challenge-FR-003-score-counter 'challenge-FR-003-score-counter')                                                                   | React |
-| 004 | [Winning choice](https://github.com/JCDMeira/challenge-FR-004-winning-choice 'challenge-FR-004-winning-choice')                                                                | React |
-| 005 | [Display case](https://github.com/JCDMeira/challenge-FR-005-display-case 'challenge-FR-005-display-case')                                                                      | React |
-| 006 | [Registration of people](https://github.com/JCDMeira/challenge-FR-006-registration-of-people 'challenge-FR-006-registration-of-people')                                        | React |
-| 007 | [Registration for events and parties](https://github.com/JCDMeira/challenge-FR-007-registration-for-events-and-parties 'challenge-FR-007-registration-for-events-and-parties') | React |
-| 008 | [Monetary planner](https://github.com/JCDMeira/challenge-FR-008-monetary-planner 'challenge-FR-008-monetary-planner')                                                          | React |
-| 009 | [Brazil landscapes](https://github.com/JCDMeira/challenge-FR-009-brazil-landscapes 'challenge-FR-009-brazil-landscapes')                                                       | React |
-| 010 | [Book guide](https://github.com/JCDMeira/challenge-FR-010-book-guide 'challenge-FR-010-book-guide')                                                                            | React |
-| 011 | [getCandy](https://github.com/JCDMeira/challenge-FR-011-getCandy 'challenge-FR-011-getCandy')                                                                                  | React |
-| 012 | [Search series](https://github.com/JCDMeira/challenge-FR-012-search-series 'challenge-FR-012-search-series')                                                                   | React |
-| 013 | [Guest list](https://github.com/JCDMeira/challenge-FR-013-guest-list 'challenge-FR-013-guest-list')                                                                            | React |
-| 014 | [Find a pokemon](https://github.com/JCDMeira/challenge-FR-014-find-a-pokemon 'challenge-FR-014-find-a-pokemon')                                                                | React |
-| 015 | [Feedback review](https://github.com/JCDMeira/challenge-FR-015-feedback-review 'challenge-FR-015-feedback-review')                                                             | React |
-| 016 | [Teach to learn](https://github.com/JCDMeira/challenge-FR-016-teach-to-learn 'challenge-FR-016-teach-to-learn')                                                                | React |
-| 017 | [On the road](https://github.com/JCDMeira/challenge-FR-017-on-the-road 'challenge-FR-017-on-the-road')                                                                         | React |
-| 018 | [Books for life](https://github.com/JCDMeira/challenge-FR-018-books-for-life 'challenge-FR-018-books-for-life')                                                                | React |
-| 019 | [Lets cook](https://github.com/JCDMeira/challenge-FR-019-lets-cook 'challenge-FR-019-lets-cook')                                                                               | React |
-| 020 | [Quiz app](https://github.com/JCDMeira/challenge-FR-020-quiz-app 'challenge-FR-020-quiz-app')                                                                                  | React |
+Sua aplicação deve ter:
+
+<br />
+
+- Um input de valor, para inserir quanto foi o total ganho.
+- Os botões de porcentagem, 5, 10, 15, 20, 30 e custom, que representam o quando se deseja poupar do dinheiro.
+- Ao clicar em um botão ele fica selecionado, até que seja clicado de novo ou outro botão seja selecionado.
+- Deve haver um botão que indique qual dia do mês se está.
+- Deve haver um campo de resultado indicando máximo o valor/dia que deve ser gasto para cumprir o planejamento.
+- Deve haver um botão que indique qual o último dia do mês.
+- O campo que indica o último dia deve apenas ter as opções 28,29,30 e 31 como selecionáveis.
+- O dia indicado não pode ser 0 e nem números negativos. Também não pode ser 31 ou mais.
+- O cálculo do gasto diário conta o dia vigente indicado.
+  EX: se o dia indicado é 21 em um mês de 30 dias, se conta como 10 dias restantes (incluso o dia 21)
+
+- Você pode escolher se os campos não permitem a entrada dos valores que não são válidos ou se indicará erros de validação caso seja inserido os valores.\*
+
+### :dart: Requisitos não funcionais <a name="id01.2.2"></a>
+
+<br />
+
+É obrigatório a utilização de:
+
+- ReactJs
+- fazer deploy
+- Contextos com useContext do react.
+
+<br />
+
+### :pushpin: Requisitos não obrigatórios <a name="id01.2.3"></a>
+
+<br />
+
+Você será bem avaliado se usar:
+
+<br />
+
+- usar HTML semântico, como tags main, section...
+- usar responsividade
+- organizar e dividir bem os arquivos
+- Componentizar e separar bem o que achar que deve
+- Usar typeScript
+- (\*) Explicar no readme o porquê da sua decisão sobre bloquear a entrada ou informar erros, descrito no último requisito.
+
+<br />
+
+# :camera_flash: Screenshots <a name="id02"></a>
+
+<br />
+
+## :iphone: Mobile design
+
+## :iphone: Tablets design
+
+## :desktop_computer: Desktop design
+
+# :heavy_check_mark: O que aprendi <a name="id03"></a>
+
+# 🛠 Mão a obra... <a name="id04"></a>
+
+Você pode forkar esse projeto e reutilizar o readme e estrutura, mas também se sinta livre para mudar ela ou mesmo criar a sua.
+
+# ☑️ Pré-requisitos para rodar <a name="id05"></a>
+
+<br />
+
+- [x] Editor de código de sua preferência (recomendado VS code)
+- [x] Git
+- [x] ?
+
+<br />
+
+# 📝 Procedimentos de instalação <a name="id06"></a>
+
+<br />
+
+Clone este repositório usando o comando:
+
+```bash
+git clone https://github.com/<meu_user>/<my-repo>.git
+```
+
+```bash
+#processos adicionais aqui
+```
+
+<br />
+
+# 👨🏾‍💻 Desafios similares e dicas <a name="id07"></a>
+
+Antes ou depois de realizar esse desafio, você pode pegar desafios parecidos do front-end mentor ou similares. Isso te ajuda a fixar e melhorar. Vou deixar alguns a seguir, pode te ajudar a se inspirar.
+
+O segredo aqui é fazer modelos parecidos até ganhar algum conforto com fazer algo com essas técnicas e esse modelo de desafio, então quem sabe pegar outros mais difíceis.
+
+[Tip calculator app](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
+
+<br>
+
+[Calculator app](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
+
+<br>
+
+Você também pode usar o dribbble para se inspirar.
+
+[Dribbble](https://dribbble.com)
 
 # :sunglasses: Autor <a name="id08"></a>
 
