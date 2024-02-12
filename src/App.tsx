@@ -10,7 +10,7 @@ function App() {
     }
   };
 
-  const handleButton = (name) => {
+  const handleButton = (name: string) => {
     console.log(name);
   };
 
