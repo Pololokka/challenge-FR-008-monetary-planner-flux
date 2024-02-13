@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet');
+
+:root {
+  --fonte-geral: 'Roboto', sans-serif;
+
+  --cor-fundo: #001f7d;
+
+  --cor-fonte: #ffffff;
+  --cor-fonte-input: #000000;
+  --cor-box: #809fff;
+  --cor-sombra: #3333bf;
+  --cor-extra: #bfcfff;
+
+  --cor-button: #3333bf;
+
+  --tamanho-fonte-titulo: 3rem;
+  --tamanho-fonte-subtitulo: 2rem;
+  --tamanho-fonte-texto: 1.5rem;
+}
+
+html {
+  background-color: var(--cor-fundo);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4em;
+}
+
+.title {
+  color: var(--cor-fonte);
+  font-size: var(--tamanho-fonte-titulo);
+  font-family: var(--fonte-geral);
+  padding: 0.5em;
+}
+
+.subtitle {
+  color: var(--cor-fonte);
+  font-size: var(--tamanho-fonte-subtitulo);
+  font-family: var(--fonte-geral);
+  padding: 0.5em;
+}
+
+.text {
+  color: var(--cor-fonte);
+  font-size: var(--tamanho-fonte-texto);
+  font-family: var(--fonte-geral);
+  padding: 0.5em;
+}
+
+.input-text {
+  color: var(--cor-fonte-input);
+  font-size: var(--tamanho-fonte-texto);
+  font-family: var(--fonte-geral);
+  padding: 0.5em;
+}
+
+.card {
+  background-color: var(--cor-box);
+  box-shadow: 10px 10px var(--cor-sombra);
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.button-style {
+  background-color: var(--cor-button);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.button-style:active {
+  transform: scale(0.9);
+}
+
+.div__inputs {
+  display: flex;
+  gap: 1em;
+}
