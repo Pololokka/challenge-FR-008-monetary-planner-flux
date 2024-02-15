@@ -13,9 +13,9 @@
 
   --cor-button: #3333bf;
 
-  --tamanho-fonte-titulo: 3rem;
-  --tamanho-fonte-subtitulo: 2rem;
-  --tamanho-fonte-texto: 1.5rem;
+  --tamanho-fonte-titulo: 2rem;
+  --tamanho-fonte-subtitulo: 1.5rem;
+  --tamanho-fonte-texto: 1rem;
 }
 
 html {
@@ -67,17 +67,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2em;
-}
-
-.button-style {
-  background-color: var(--cor-button);
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 200ms;
-}
-
-.button-style:active {
-  transform: scale(0.9);
 }
 
 .div__inputs {

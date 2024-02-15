@@ -1,31 +1,25 @@
-import { useState } from 'react';
 import './App.css';
+
+import { useState } from 'react';
+import PercentButton from './Components/PercentButton/Index';
 
 function App() {
   const [totalAmt, setTotalAmt] = useState(0);
-  const [savePer, setSavePer] = useState(5);
   const [curDay, setCurDay] = useState(1);
   const [lastDay, setLastDay] = useState(31);
+  const [customPer, setCustomPer] = useState(0);
 
-  const handleNegativeAmt = (
-    amount: number,
+  const handleWrongAmt = (
+    event: React.FocusEvent<HTMLInputElement, Element>,
     setState: React.Dispatch<React.SetStateAction<number>>,
   ) => {
-    if (amount < 0) {
-      setState(0);
+    const amount = event?.target?.value;
+    const base = event?.target?.min;
+
+    if (amount < base) {
+      setState(parseInt(base));
     }
   };
-
-  console.log(
-    'totalAmt: ',
-    totalAmt,
-    '\n savePer: ',
-    savePer,
-    '\n curDay: ',
-    curDay,
-    '\n lastDay: ',
-    lastDay,
-  );
 
   return (
     <main>
@@ -43,9 +37,7 @@ function App() {
             id="totalAmt"
             min={0}
             value={totalAmt || 0}
-            onBlur={(event) =>
-              handleNegativeAmt(parseInt(event.target.value), setTotalAmt)
-            }
+            onBlur={(event) => handleWrongAmt(event, setTotalAmt)}
             onChange={(event) => setTotalAmt(parseInt(event.target.value))}
           />
         </div>
@@ -53,21 +45,25 @@ function App() {
         <div className="div__inputs">
           <p className="text">Escolha quanto você quer poupar:</p>
 
-          <button
-            className="text button-style"
-            name="5"
-            onClick={(event) => setSavePer(parseInt(event.target.name))}
-          >
-            5%
-          </button>
+          <PercentButton percent={'5'} />
+          <PercentButton percent={'10'} />
+          <PercentButton percent={'15'} />
 
-          <button
-            className="text button-style"
-            name="10"
-            onClick={(event) => setSavePer(parseInt(event.target.name))}
-          >
-            10%
-          </button>
+          <label className="text" htmlFor="customPer">
+            Valor Custom
+          </label>
+          <input
+            type="number"
+            className="input-text"
+            name="customPer"
+            id="customPer"
+            min={1}
+            max={100}
+            value={customPer || 0}
+            onBlur={(event) => handleWrongAmt(event, setCustomPer)}
+            onChange={(event) => setCustomPer(parseInt(event.target.value))}
+          />
+          <PercentButton percent={String(customPer)} name="custom" />
         </div>
 
         <div className="div__inputs">
@@ -82,9 +78,7 @@ function App() {
             min={1}
             max={31}
             value={curDay || 1}
-            onBlur={(event) =>
-              handleNegativeAmt(parseInt(event.target.value), setCurDay)
-            }
+            onBlur={(event) => handleWrongAmt(event, setCurDay)}
             onChange={(event) => setCurDay(parseInt(event.target.value))}
           />
 
@@ -97,16 +91,16 @@ function App() {
             id="lastDay"
             onChange={(event) => setLastDay(parseInt(event.target.value))}
           >
-            <option className="text" value={31}>
+            <option className="input-text" value={31}>
               31
             </option>
-            <option className="text" value={30}>
+            <option className="input-text" value={30}>
               30
             </option>
-            <option className="text" value={28}>
+            <option className="input-text" value={28}>
               28
             </option>
-            <option className="text" value={29}>
+            <option className="input-text" value={29}>
               29
             </option>
           </select>
