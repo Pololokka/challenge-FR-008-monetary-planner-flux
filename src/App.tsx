@@ -5,9 +5,14 @@ import PercentButton from './Components/PercentButton/Index';
 
 function App() {
   const [totalAmt, setTotalAmt] = useState(0);
+  const [percentSaved, setPercentSaved] = useState(0);
+  const [customPer, setCustomPer] = useState(0);
+
   const [curDay, setCurDay] = useState(1);
   const [lastDay, setLastDay] = useState(31);
-  const [customPer, setCustomPer] = useState(0);
+
+  const [result, setResult] = useState(0);
+  const [resultDaily, setResultDaily] = useState(0);
 
   const handleWrongAmt = (
     event: React.FocusEvent<HTMLInputElement, Element>,
