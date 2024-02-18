@@ -2,29 +2,14 @@ import './App.css';
 
 import { useState } from 'react';
 import PercentButton from './Components/PercentButton/Index';
+import { usePlannerStore } from './FluxCore/Contexts/plannerContext';
+import { plannerActions } from './FluxCore/Actions/Planner';
 
 function App() {
-  const [totalAmt, setTotalAmt] = useState(0);
-  const [percentSaved, setPercentSaved] = useState(0);
-  const [customPer, setCustomPer] = useState(0);
-
-  const [curDay, setCurDay] = useState(1);
-  const [lastDay, setLastDay] = useState(31);
+  const { state, dispatch } = usePlannerStore();
 
   const [result, setResult] = useState(0);
   const [resultDaily, setResultDaily] = useState(0);
-
-  const handleWrongAmt = (
-    event: React.FocusEvent<HTMLInputElement, Element>,
-    setState: React.Dispatch<React.SetStateAction<number>>,
-  ) => {
-    const amount = event?.target?.value;
-    const base = event?.target?.min;
-
-    if (amount < base) {
-      setState(parseInt(base));
-    }
-  };
 
   return (
     <main>
@@ -41,9 +26,10 @@ function App() {
             name="totalAmt"
             id="totalAmt"
             min={0}
-            value={totalAmt || 0}
-            onBlur={(event) => handleWrongAmt(event, setTotalAmt)}
-            onChange={(event) => setTotalAmt(parseInt(event.target.value))}
+            value={state.totalAmt || 0}
+            onChange={(event) =>
+              dispatch(plannerActions.setTotalAmt(parseInt(event.target.value)))
+            }
           />
         </div>
 
@@ -64,11 +50,14 @@ function App() {
             id="customPer"
             min={1}
             max={100}
-            value={customPer || 0}
-            onBlur={(event) => handleWrongAmt(event, setCustomPer)}
-            onChange={(event) => setCustomPer(parseInt(event.target.value))}
+            value={state.customPer || 0}
+            onChange={(event) =>
+              dispatch(
+                plannerActions.setCustomPer(parseInt(event.target.value)),
+              )
+            }
           />
-          <PercentButton percent={String(customPer)} name="custom" />
+          <PercentButton percent={String(state.customPer)} name="custom" />
         </div>
 
         <div className="div__inputs">
@@ -82,9 +71,10 @@ function App() {
             id="curDay"
             min={1}
             max={31}
-            value={curDay || 1}
-            onBlur={(event) => handleWrongAmt(event, setCurDay)}
-            onChange={(event) => setCurDay(parseInt(event.target.value))}
+            value={state.curDay || 1}
+            onChange={(event) =>
+              dispatch(plannerActions.setCurDay(parseInt(event.target.value)))
+            }
           />
 
           <label className="text" htmlFor="lastDay">
@@ -94,7 +84,9 @@ function App() {
             name="lastDay"
             className="input-text"
             id="lastDay"
-            onChange={(event) => setLastDay(parseInt(event.target.value))}
+            onChange={(event) =>
+              dispatch(plannerActions.setLastDay(parseInt(event.target.value)))
+            }
           >
             <option className="input-text" value={31}>
               31
