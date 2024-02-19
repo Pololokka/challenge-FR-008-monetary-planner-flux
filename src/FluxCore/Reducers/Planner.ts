@@ -1,7 +1,7 @@
 import { PlannerAction, PlannerActionsType } from '../Actions/Planner';
 
 export interface PlannerState {
-  totalAmt: number;
+  totalAmt: any;
   percentSaved: number;
   curDay: number;
   lastDay: number;

@@ -1,15 +1,11 @@
 import './App.css';
 
-import { useState } from 'react';
 import PercentButton from './Components/PercentButton/Index';
 import { usePlannerStore } from './FluxCore/Contexts/plannerContext';
 import { plannerActions } from './FluxCore/Actions/Planner';
 
 function App() {
   const { state, dispatch } = usePlannerStore();
-
-  const [result, setResult] = useState(0);
-  const [resultDaily, setResultDaily] = useState(0);
 
   return (
     <main>
