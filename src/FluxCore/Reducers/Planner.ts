@@ -3,7 +3,6 @@ import { PlannerAction, PlannerActionsType } from '../Actions/Planner';
 export interface PlannerState {
   totalAmt: number;
   percentSaved: number;
-  customPer: number;
   curDay: number;
   lastDay: number;
   result: number;
@@ -24,12 +23,6 @@ const actionsExecutors: Record<
     return {
       ...state,
       percentSaved: payload,
-    };
-  },
-  setCustomPer: (state: PlannerState, payload: number) => {
-    return {
-      ...state,
-      customPer: payload,
     };
   },
   setCurDay: (state: PlannerState, payload: number) => {

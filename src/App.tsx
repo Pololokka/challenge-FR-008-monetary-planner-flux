@@ -50,14 +50,14 @@ function App() {
             id="customPer"
             min={1}
             max={100}
-            value={state.customPer || 0}
+            value={state.percentSaved || 0}
             onChange={(event) =>
               dispatch(
-                plannerActions.setCustomPer(parseInt(event.target.value)),
+                plannerActions.setPercentSaved(parseInt(event.target.value)),
               )
             }
           />
-          <PercentButton percent={String(state.customPer)} name="custom" />
+          <PercentButton percent={String(state.percentSaved)} name="custom" />
         </div>
 
         <div className="div__inputs">
@@ -103,7 +103,14 @@ function App() {
           </select>
         </div>
 
-        <h2 className="subtitle">Total que pode ser gasto por dia: X</h2>
+        <h2 className="subtitle">
+          Total que será poupado economizando {state.percentSaved} por dia:{' '}
+          {state.result}
+        </h2>
+
+        <h2 className="subtitle">
+          Total que pode ser gasto por dia: {state.resultDaily}
+        </h2>
       </div>
     </main>
   );

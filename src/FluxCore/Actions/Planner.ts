@@ -1,7 +1,6 @@
 export type PlannerActionsType =
   | 'setTotalAmt'
   | 'setPercentSaved'
-  | 'setCustomPer'
   | 'setCurDay'
   | 'setLastDay'
   | 'setResult'
@@ -17,8 +16,6 @@ export const plannerActions = {
     ({ type: 'setTotalAmt', payload: totalAmt }) as PlannerAction,
   setPercentSaved: (percentSaved: number) =>
     ({ type: 'setPercentSaved', payload: percentSaved }) as PlannerAction,
-  setCustomPer: (customPer: number) =>
-    ({ type: 'setCustomPer', payload: customPer }) as PlannerAction,
   setCurDay: (curDay: number) =>
     ({ type: 'setCurDay', payload: curDay }) as PlannerAction,
   setLastDay: (lastDay: number) =>
