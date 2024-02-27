@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useReducer } from 'react';
-import { PlannerAction, plannerActions } from '../Actions/Planner';
+import { createContext, useContext, useReducer } from 'react';
+import { PlannerAction } from '../Actions/Planner';
 import { PlannerState, plannerReducer } from '../Reducers/Planner';
 
 interface PlannerStore {
