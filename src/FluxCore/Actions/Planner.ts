@@ -3,8 +3,7 @@ export type PlannerActionsType =
   | 'setPercentSaved'
   | 'setCurDay'
   | 'setLastDay'
-  | 'setResult'
-  | 'setResultDaily';
+  | 'setResult';
 
 export interface PlannerAction {
   type: PlannerActionsType;
@@ -20,8 +19,5 @@ export const plannerActions = {
     ({ type: 'setCurDay', payload: curDay }) as PlannerAction,
   setLastDay: (lastDay: number) =>
     ({ type: 'setLastDay', payload: lastDay }) as PlannerAction,
-  setResult: (result: number) =>
-    ({ type: 'setResult', payload: result }) as PlannerAction,
-  setResultDaily: (resultDaily: number) =>
-    ({ type: 'setResultDaily', payload: resultDaily }) as PlannerAction,
+  setResult: () => ({ type: 'setResult' }) as PlannerAction,
 };

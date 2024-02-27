@@ -19,9 +19,7 @@ const PercentButton = ({
   return (
     <button
       className="text button-style"
-      name={percent}
-      //@ts-ignore
-      onClick={(event) => handleChangePercent(parseInt(event.target.name))}
+      onClick={() => handleChangePercent(parseInt(percent))}
     >
       {name || percent} %
     </button>

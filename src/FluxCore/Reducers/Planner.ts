@@ -5,8 +5,7 @@ export interface PlannerState {
   percentSaved: number;
   curDay: number;
   lastDay: number;
-  result: number;
-  resultDaily: number;
+  result: any;
 }
 
 const actionsExecutors: Record<
@@ -37,16 +36,20 @@ const actionsExecutors: Record<
       lastDay: payload,
     };
   },
-  setResult: (state: PlannerState, payload: number) => {
+  setResult: (state: PlannerState, payload: Object) => {
+    const saving = state.totalAmt * (state.percentSaved / 100);
+
+    const time = state.lastDay - state.curDay + 1;
+
+    const daily = parseInt(((state.totalAmt - saving) / time).toFixed(2));
+
+    payload = { saving: saving, daily: daily };
+
+    console.log(payload);
+
     return {
       ...state,
       result: payload,
-    };
-  },
-  setResultDaily: (state: PlannerState, payload: number) => {
-    return {
-      ...state,
-      resultDaily: payload,
     };
   },
 };
