@@ -35,6 +35,8 @@ function App() {
           <PercentButton percent={'5'} />
           <PercentButton percent={'10'} />
           <PercentButton percent={'15'} />
+          <PercentButton percent={'20'} />
+          <PercentButton percent={'30'} />
 
           <label className="text" htmlFor="customPer">
             Valor Custom

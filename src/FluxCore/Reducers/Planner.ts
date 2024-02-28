@@ -5,6 +5,8 @@ export interface PlannerState {
   percentSaved: number;
   curDay: number;
   lastDay: number;
+  isCustomValue: boolean;
+  customPercentValue: number;
   result: any;
 }
 
@@ -34,6 +36,18 @@ const actionsExecutors: Record<
     return {
       ...state,
       lastDay: payload,
+    };
+  },
+  isCustom: (state: PlannerState, payload: boolean) => {
+    return {
+      ...state,
+      isCustomValue: payload,
+    };
+  },
+  customPercent: (state: PlannerState, payload: number) => {
+    return {
+      ...state,
+      customPercentValue: payload,
     };
   },
   setResult: (state: PlannerState, payload: Object) => {

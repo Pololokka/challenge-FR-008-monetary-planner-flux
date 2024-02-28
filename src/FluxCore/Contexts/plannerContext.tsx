@@ -12,6 +12,8 @@ export const initialState: PlannerState = {
   percentSaved: 5,
   curDay: 1,
   lastDay: 31,
+  isCustomValue: false,
+  customPercentValue: 35,
   result: { saving: 0, daily: 0 },
 };
 
