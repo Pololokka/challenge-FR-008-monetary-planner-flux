@@ -111,14 +111,16 @@ function App() {
           Calcular
         </button>
 
-        <h2 className="subtitle">
-          Total que será poupado economizando {state.percentSaved} por dia:{' '}
-          {state.result.saving}
-        </h2>
+        <div className="card__second">
+          <h2 className="subtitle">
+            Total que será poupado economizando {state.percentSaved} por dia:{' '}
+            {state.result.saving}
+          </h2>
 
-        <h2 className="subtitle">
-          Total que pode ser gasto por dia: {state.result.daily}
-        </h2>
+          <h2 className="subtitle">
+            Total que pode ser gasto por dia: {state.result.daily}
+          </h2>
+        </div>
       </div>
     </main>
   );

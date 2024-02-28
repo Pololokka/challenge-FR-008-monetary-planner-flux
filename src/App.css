@@ -8,7 +8,9 @@
   --cor-fonte: #ffffff;
   --cor-fonte-input: #000000;
   --cor-box: #809fff;
+  --cor-box-sec: #001f7d;
   --cor-sombra: #3333bf;
+  --cor-sombra-sec: #bfcfff;
   --cor-extra: #bfcfff;
 
   --cor-button: #3333bf;
@@ -67,6 +69,15 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2em;
+}
+
+.card__second {
+  background-color: var(--cor-box-sec);
+  box-shadow: 10px 10px var(--cor-sombra-sec);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .div__inputs {
