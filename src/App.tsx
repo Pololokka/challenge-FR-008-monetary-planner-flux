@@ -48,14 +48,17 @@ function App() {
             id="customPer"
             min={1}
             max={100}
-            value={state.percentSaved || 0}
+            value={state.customPercentValue || 0}
             onChange={(event) =>
               dispatch(
-                plannerActions.setPercentSaved(parseInt(event.target.value)),
+                plannerActions.customPercent(parseInt(event.target.value)),
               )
             }
           />
-          <PercentButton percent={String(state.percentSaved)} name="custom" />
+          <PercentButton
+            percent={String(state.customPercentValue)}
+            name="custom"
+          />
         </div>
 
         <div className="div__inputs">

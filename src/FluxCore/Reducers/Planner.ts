@@ -5,7 +5,6 @@ export interface PlannerState {
   percentSaved: number;
   curDay: number;
   lastDay: number;
-  isCustomValue: boolean;
   customPercentValue: number;
   result: any;
 }
@@ -38,12 +37,6 @@ const actionsExecutors: Record<
       lastDay: payload,
     };
   },
-  isCustom: (state: PlannerState, payload: boolean) => {
-    return {
-      ...state,
-      isCustomValue: payload,
-    };
-  },
   customPercent: (state: PlannerState, payload: number) => {
     return {
       ...state,
@@ -58,8 +51,6 @@ const actionsExecutors: Record<
     const daily = parseInt(((state.totalAmt - saving) / time).toFixed(2));
 
     payload = { saving: saving, daily: daily };
-
-    console.log(payload);
 
     return {
       ...state,
