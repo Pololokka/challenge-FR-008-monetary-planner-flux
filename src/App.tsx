@@ -32,11 +32,11 @@ function App() {
         <div className="div__inputs">
           <p className="text">Escolha quanto você quer poupar:</p>
 
-          <PercentButton percent={'5'} />
-          <PercentButton percent={'10'} />
-          <PercentButton percent={'15'} />
-          <PercentButton percent={'20'} />
-          <PercentButton percent={'30'} />
+          <PercentButton percent={'5'} name="5" />
+          <PercentButton percent={'10'} name="10" />
+          <PercentButton percent={'15'} name="15" />
+          <PercentButton percent={'20'} name="20" />
+          <PercentButton percent={'30'} name="30" />
 
           <label className="text" htmlFor="customPer">
             Valor Custom

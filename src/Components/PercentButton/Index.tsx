@@ -17,12 +17,17 @@ const PercentButton = ({
   };
 
   return (
-    <button
-      className="text button-style"
-      onClick={() => handleChangePercent(parseInt(percent))}
-    >
-      {name || percent} %
-    </button>
+    <div className="button-style">
+      <input
+        type="radio"
+        name="percentRadio"
+        id={name}
+        onClick={() => handleChangePercent(parseInt(percent))}
+      />
+      <label htmlFor={name} className="text button-label">
+        {name || percent} %
+      </label>
+    </div>
   );
 };
 
